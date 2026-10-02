@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cairo69 Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-title">
+    <strong>Brain Hagio Kim</strong><br>
+    <div class="avatar" aria-hidden="true">Welcome</div>
+  </header>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <div class="logo-box"><img src="imagepfp.jpeg" alt="Profile picture"></div>
+
+      <p class="info-label">NIM:</p>
+      <p class="info-value">01082240026</p>
+
+      <p class="info-label">Role:</p>
+      <p class="info-value">Informatics Undergraduate</p>
+
+      <nav aria-label="Main navigation">
+        <a href="#home" class="menu-btn">Home</a>
+        <a href="#about" class="menu-btn">About Me</a>
+        <a href="#skills" class="menu-btn">Skills</a>
+        <a href="#projects" class="menu-btn">Projects</a>
+        <a href="#contact" class="menu-btn">Contact</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+
+      <section id="home">
+        <div class="row">
+          <span>Portfolio Status</span>
+          <span>Online</span>
+        </div>
+        <div class="bar">
+          <div class="fill" style="width: 100%"></div>
+        </div>
+        <div class="row">
+          <span>Projects Completed</span>
+          <span>4</span>
+        </div>
+        <div class="row">
+          <span>Cup of Tea</span>
+          <span>247</span>
+        </div>
+        <h1 class="home-title">TOTAL PROJECTS: 4</h1>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">
+          Hello, I'm Kim. These are projects I've completed.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-row">
+          <span>Sitting</span>
+          <div class="bar"><div class="fill" style="width: 90%"></div></div>
+          <span>90%</span>
+        </div>
+        <div class="skill-row">
+          <span>Gaming</span>
+          <div class="bar"><div class="fill" style="width: 85%"></div></div>
+          <span>85%</span>
+        </div>
+        <div class="skill-row">
+          <span>Mogging</span>
+          <div class="bar"><div class="fill" style="width: 55%"></div></div>
+          <span>55%</span>
+        </div>
+        <div class="skill-row">
+          <span>Githubbing</span>
+          <div class="bar"><div class="fill" style="width: 70%"></div></div>
+          <span>70%</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <a class="project" href="https://biglor96.github.io/lab-project/lab02-hello-world/tugas-lab02.html" target="_blank" rel="noopener noreferrer">
+          <span>
+            <b>01. Hello World</b>
+            <small>Lab 02 — first page with images and video</small>
+          </span>
+          <span class="open">Open →</span>
+        </a>
+
+        <a class="project" href="https://biglor96.github.io/lab-project/lab04.1-mondrian/" target="_blank" rel="noopener noreferrer">
+          <span>
+            <b>02. Mondrian</b>
+            <small>Lab 4.1 — layout exercise built with CSS</small>
+          </span>
+          <span class="open">Open →</span>
+        </a>
+
+        <a class="project" href="https://biglor96.github.io/lab-project/lab04.2-agency/" target="_blank" rel="noopener noreferrer">
+          <span>
+            <b>03. Agency</b>
+            <small>Lab 4.2 — full landing page</small>
+          </span>
+          <span class="open">Open →</span>
+        </a>
+
+        <a class="project" href="https://biglor96.github.io/lab-project/lab05-3d-boxes/" target="_blank" rel="noopener noreferrer">
+          <span>
+            <b>04. 3D Boxes</b>
+            <small>Lab 05 — 3D effects with JavaScript</small>
+          </span>
+          <span class="open">Open →</span>
+        </a>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="row">
+          <span>Email</span>
+          <a href="mailto:hagiokim8@gmail.com">hagiokim8@gmail.com</a>
+        </div>
+        <div class="row">
+          <span>GitHub</span>
+          <a href="https://github.com/BigLor96" target="_blank" rel="noopener noreferrer">github.com/BigLor96</a>
+        </div>
+        <div class="row">
+          <span>Lab Repo</span>
+          <a href="https://github.com/BigLor96/lab-project" target="_blank" rel="noopener noreferrer">BigLor96/lab-project</a>
+        </div>
+      </section>
+
+      <p class="footer">© 2026 Kim All rights reservered</p>
+
+    </main>
+
+  </div>
+
+  <script>
+    const menuLinks = document.querySelectorAll(".menu-btn");
+
+    function updateActiveLink() {
+      const currentSection = window.location.hash || "#home";
+
+      menuLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === currentSection;
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    window.addEventListener("hashchange", updateActiveLink);
+    updateActiveLink();
+  </script>
+</body>
+</html>
