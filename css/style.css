@@ -338,9 +338,9 @@ h2 {
 
 /* Global font controls: change these values to update the page fonts and size. */
 :root {
-  --site-font-family: 'Chalet London 1960', sans-serif; /* Main UI font
+  --site-font-family: 'Chalet London 1960', sans-serif; /* Main UI font */
   --title-font-family: 'Pricedown Bl', sans-serif; /* Logo and heading font. */
-  --site-font-size: 17px; /*
+  --site-font-size: 17px;
 }
 
 /* Pricedown for the name at the top and all page titles. */
